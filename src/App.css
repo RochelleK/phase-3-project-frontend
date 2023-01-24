@@ -132,3 +132,105 @@ padding-top: 20px;
   height: 50px;
   margin:auto
 }
+
+.form {
+  border: 1px #cde2ff solid;
+  border-radius: 50px;
+  background-color: #cde2ff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1rem 6rem;
+  margin-top: 2.5rem;
+}
+
+#form-2 {
+  width: 60vw;
+  position: absolute;
+  top: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+}
+
+#form {
+  width: 130vw;
+  position: absolute;
+  top: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+}
+
+.form-title {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  text-shadow: -1px 1px 0 #4580a8, 1px 1px 0 #6d6b6b, 1px -1px 0 #42afac,
+    -1px -1px 0 #c6c23f;
+}
+
+.form-text {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 800;
+  text-shadow: -1px 1px 0 #4580a8, 1px 1px 0 #6d6b6b, 1px -1px 0 #42afac,
+    -1px -1px 0 #c6c23f;
+}
+
+#range {
+  -webkit-appearance: none;
+  width: 300px;
+  height: 1em;
+  border-radius: 5px;
+  margin-left: 1rem;
+  background-image: linear-gradient(#f9dbeb, #f9dbeb);
+  background-repeat: no-repeat;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  background-color: #f9dbeb;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#form-submit {
+  margin-top: 1.5rem;
+  background-color: #f9dbeb;
+  border: #cde2ff;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 800;
+  height: 50px;
+  width: 140px;
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,28 @@
+{
+    "matches":[
+      {
+        "id": 1,
+        "name": "name1",
+        "pic": "./blind-date.png",
+        "bio": "placeholder bio"
+      },
+      {
+        "id": 2,
+        "name": "2name",
+        "pic": "./blind-date.png",
+        "bio": "2placeholder bio"
+      },
+      {
+        "id": 3,
+        "name": "name3",
+        "pic": "./blind-date.png",
+        "bio": "placeholder bio3"
+      },
+      {
+        "id": 4,
+        "name": "name4",
+        "pic": "./blind-date.png",
+        "bio": "placeholder bio4"
+      }
+    ]
+}
