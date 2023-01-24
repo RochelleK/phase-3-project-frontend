@@ -86,3 +86,49 @@ nav a.active {
   flex-direction: row;
   align-items: center;
 }
+
+.browse{
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  width: 80%;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  padding: 20px;
+  align-content: center;
+}
+
+.prof-pic {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  align-self: center;
+  margin: auto;
+}
+
+.browse-container {
+  display: flex;
+  padding: 30px;
+}
+
+.browse-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.browse-meme{
+  display: flex;
+  margin: auto;
+  height: 300px;
+}
+
+.browse-buttons{
+display: flex;
+padding-top: 20px;
+}
+
+.browse-buttons img{
+  height: 50px;
+  margin:auto
+}
