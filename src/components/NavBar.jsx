@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function NavBar() {
-  return (
-    <div>NavBar</div>
-  )
+  return <div>Profile Browse Matches</div>;
 }
 
-export default NavBar
+export default NavBar;
