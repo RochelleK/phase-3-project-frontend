@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import MatchCarousel from './MatchCarousel'
+import NavBar from './NavBar';
 
 function Matches() {
   const [matches, setMatches] = useState([]);
@@ -17,7 +18,8 @@ function Matches() {
 
 
   return (
-    <div>Matches
+    <div>
+      <NavBar/>
       <MatchCarousel matches = {matches}/>
     </div>
     
