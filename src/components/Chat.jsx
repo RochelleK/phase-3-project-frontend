@@ -3,9 +3,11 @@ import React from "react";
 function Chat({match}) {
   return (
     <div>
-      <div className="chatbox">
+      <div className="form">
+        THIS IS THE CHAT BOX.
+        <br></br>
         You are now chatting with:
-        <p>{match.name}</p>
+        <h1>{match.name}</h1>
       </div>
     </div>
   );

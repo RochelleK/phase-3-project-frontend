@@ -8,7 +8,6 @@ function Match({ match, startChat }) {
       <div className="match wrapper">
         <img src={match.profile_image} />
         <p className="name">{match.name}</p>
-        <p className="title">{match.bio}</p>
         <button type="button" class="btn" onClick={()=>startChat(match)}>
           Let's Chat!
         </button>

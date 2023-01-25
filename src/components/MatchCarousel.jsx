@@ -15,7 +15,7 @@ function MatchCarousel({matches, setBeltPosition, beltPosition, startChat}) {
         ))}
       
       </div>
-        <button onClick={addMoreMatches}> ADD MORE MATCHES </button>
+      <button onClick={addMoreMatches}> ADD MORE MATCHES </button>
     </div>
   );
 }

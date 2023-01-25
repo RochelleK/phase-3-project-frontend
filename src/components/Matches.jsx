@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Header from './Header';
 import MatchCarousel from './MatchCarousel'
 import Chat from './Chat'
+import MatchCards from './MatchCards';
 
 function Matches() {
   const [matches, setMatches] = useState([]);
@@ -29,7 +30,11 @@ function Matches() {
     <div>
       <Header />
       <MatchCarousel startChat={startChat} beltPosition={beltPosition} setBeltPosition={setBeltPosition}  matches = {matches.slice(beltPosition, beltPosition+4)}/>
+      <div className='belt'>
+      <MatchCards match={match}/>
       <Chat match={match}/>
+
+      </div>
     </div>
     
   )
