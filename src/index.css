@@ -1,5 +1,6 @@
 
 
+
 .belt {
   grid-area: bt;
   display: flex;
@@ -7,6 +8,7 @@
 }
 
 .match {
+
   border: 1px #cde2ff solid;
   border-radius: 50px;
   background-color: #cde2ff;
@@ -16,12 +18,14 @@
   padding: 1rem 6rem;
   margin-top: 2.5rem;
   height: max-content;
+
 }
 
 .match img {
   max-height: 300px;
   max-width: 100px;
 }
+
 .chatbox {
   border: 1px #cde2ff solid;
   border-radius: 50px;
@@ -48,3 +52,4 @@ img {
   max-width: 100px;
   max-height: 100px;
 }
+
