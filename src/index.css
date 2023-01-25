@@ -19,13 +19,15 @@ code {
 }
 
 .match {
-  min-width: 150px;
-  margin: auto;
-  max-height: 300px;
-  max-width: 100px;
-  border: 1px black solid; 
-  font-size: 10px;
-  margin-top: 100px;
+  border: 1px #cde2ff solid;
+  border-radius: 50px;
+  background-color: #cde2ff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1rem 6rem;
+  margin-top: 2.5rem;
+  height: max-content;
 
 }
 
@@ -33,11 +35,94 @@ code {
   max-height: 300px;
   max-width: 100px;
 }
+.chatbox {
+  border: 1px #cde2ff solid;
+  border-radius: 50px;
+  background-color: #cde2ff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1rem 6rem;
+  margin-top: 2.5rem;
+  height: max-content;
+
+}
 
 button {
+   grid-area: bt;
+  display: flex;
+  justify-content: space-evenly;
   color: red; 
   max-height: 100px;
   max-width: 100px;
   border: red;
 
+}
+
+.wrapper {
+  width: 320px;
+  height: 540px;
+  background: #FDFEFF;
+	transition: background .6s ease;
+	border-radius: 10px;
+	padding: 20px 20px 20px 20px;
+	box-shadow: 0 8px 40px rgba(#000000, .2);
+	
+
+	.profile {
+		margin-top: 2.2em;
+		position: relative;
+		
+		&:after {
+			width: 100%;
+			height: 1px;
+			content: ' ';
+			display: block;
+			margin-top: 1.3em;
+			background: #E9EFF6;
+		}
+		
+		
+		.name {
+			color: #2D354A;
+			font-size: 24px;
+			font-weight: 600;
+			text-align: center;
+		}
+		
+		.title {
+			color: #7C8097;
+			font-size: .75em;
+			font-weight: 300;
+			text-align: center;
+			padding-top: .5em;
+			padding-bottom: .7em;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+		}
+		
+		.description {
+			color: #080911;
+			font-size: 14px;
+			font-weight: 300;
+			text-align: center;
+			margin-bottom: 1.3em;
+		}
+		
+		.btn {
+			color: #fff;
+			width: 130px;
+			height: 42px;
+			outline: none;
+			border: none;
+			display: block;
+			cursor: pointer;
+			font-weight: 300;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 70px;
+			box-shadow: 0 13px 26px rgba(#000, .16), 0 3px 6px rgba(#000, .16);
+			background: $purple-gradient;
+		}
+	}
 }
