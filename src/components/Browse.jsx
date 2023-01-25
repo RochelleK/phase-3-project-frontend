@@ -4,11 +4,7 @@ import Header from './Header'
 function Browse() {
   
   const [potentialMatches, setPotentialMatches] = useState([])
-  const [currentPotentialMatch, setCurrentPotentialMatch] = useState([0])
-
-  // function nextProfile(){
-  //   setCurrentPotentialMatch(currentPotentialMatch ++)
-  // }
+  const [currentPotentialMatch, setCurrentPotentialMatch] = useState(0)
 
   useEffect(() =>{
     fetch("http://localhost:9292/users")
@@ -50,8 +46,8 @@ function Browse() {
                   </div>
                   </div>
                   <div className='browse-buttons'>
-                    <img src='/assets/delete.png' alt='https://www.flaticon.com/free-icons/cross'/>
-                    <img src='/assets/check.png' alt="https://www.flaticon.com/free-icons/foursquare-check-in"/>
+                    <img src='/assets/delete.png' alt='https://www.flaticon.com/free-icons/cross' onClick={()=>setCurrentPotentialMatch(currentPotentialMatch+1)}/>
+                    <img src='/assets/check.png' alt="https://www.flaticon.com/free-icons/foursquare-check-in" onClick={()=>setCurrentPotentialMatch(currentPotentialMatch+1)}/>
                   </div>
           </div>
       </div>
