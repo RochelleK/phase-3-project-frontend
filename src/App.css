@@ -116,31 +116,29 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   padding: 1rem 6rem;
-  margin-top: 2.5rem;
+  text-align: center;
 }
 
-#form-2 {
-  width: 60vw;
-  position: absolute;
-  top: 15vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.form-2 {
+  border: 1px #cde2ff solid;
+  border-radius: 50px;
+  background-color: #cde2ff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 1rem 6rem;
   text-align: center;
+}
+
+#form-2-div {
+  position: absolute;
   padding: 1rem;
 }
-
 #form {
-  width: 100vw;
   position: absolute;
-  top: 15vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
   padding: 1rem;
+  margin-left: 60rem;
+  margin-top: 23rem;
 }
 
 .form-title {
@@ -206,14 +204,35 @@
   font-size: 20px;
   font-weight: 800;
   height: 50px;
-  width: 140px;
+  width: 200px;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .pref-button {
-  height: 5vh;
   background-color: white;
   color: black;
   border: black solid 2px;
-  margin-top: 10rem;
+  margin-top: 26rem;
+  margin-left: 14rem;
+  height: 4rem;
+  width: 10rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  color: rgb(255, 255, 255);
+  background-color: #f9dbeb;
+  border: #cde2ff;
+  border-radius: 5px;
+}
+
+.personal-div {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.profile-card-div {
+  margin-left: 40rem;
 }
