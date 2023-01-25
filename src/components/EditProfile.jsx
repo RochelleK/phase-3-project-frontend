@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function EditProfile() {
   return (
     <div id="form-2-div">
