@@ -4,17 +4,11 @@
   margin: 0;
   color: black;
 }
-body {
-}
 
 .header-div {
-  /* background-color: #dde2e5; */
-
   display: flex;
   flex-direction: row;
-  /* background-color: rgb(210, 217, 238); */
   align-items: center;
-  /* padding: 1rem; */
   position: fixed;
   height: 15vh;
   width: 100%;
@@ -24,13 +18,9 @@ body {
 }
 
 .header-div-sub {
-  background-color: #dde2e5;
-
   display: flex;
   flex-direction: row;
-  /* background-color: rgb(210, 217, 238); */
   align-items: center;
-  /* padding: 1rem; */
   position: fixed;
   height: 15vh;
   width: 100%;
@@ -41,14 +31,8 @@ body {
 
 .header-title {
   margin-left: 4rem;
-  /* color: rgb(42, 85, 214); */
-
   font-weight: 500;
   font-size: 40px;
-}
-
-a:link {
-  text-decoration: none;
 }
 
 .nav-options {
@@ -59,20 +43,11 @@ a:link {
 
 .nav-item {
   margin-left: 3rem;
-  color: rgb(255, 255, 255);
+  color: black;
   font-size: 25px;
   font-weight: 500;
   border: none;
-}
-
-.nav-item:hover {
-  background-color: #cde2ff;
-}
-
-nav a.active {
-  background-color: #cde2ff;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  background-color: white;
 }
 
 #nav-icon {
@@ -87,7 +62,7 @@ nav a.active {
   align-items: center;
 }
 
-.browse{
+.browse {
   border-width: 2px;
   border-style: solid;
   border-color: black;
@@ -117,20 +92,20 @@ nav a.active {
   flex-direction: column;
 }
 
-.browse-meme{
+.browse-meme {
   display: flex;
   margin: auto;
   height: 300px;
 }
 
-.browse-buttons{
-display: flex;
-padding-top: 20px;
+.browse-buttons {
+  display: flex;
+  padding-top: 20px;
 }
 
-.browse-buttons img{
+.browse-buttons img {
   height: 50px;
-  margin:auto
+  margin: auto;
 }
 
 .form {
@@ -157,7 +132,7 @@ padding-top: 20px;
 }
 
 #form {
-  width: 130vw;
+  width: 100vw;
   position: absolute;
   top: 15vh;
   display: flex;
@@ -233,4 +208,12 @@ padding-top: 20px;
   height: 50px;
   width: 140px;
   margin-bottom: 1.5rem;
+}
+
+.pref-button {
+  height: 5vh;
+  background-color: white;
+  color: black;
+  border: black solid 2px;
+  margin-top: 10rem;
 }
