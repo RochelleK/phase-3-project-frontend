@@ -8,7 +8,7 @@ body {
 }
 
 .header-div {
-  /* background-color: #dde2e5; */
+  background-color: #dde2e5;
 
   display: flex;
   flex-direction: row;
@@ -88,13 +88,15 @@ nav a.active {
 }
 
 .browse{
+  display: flex;
+  flex-direction: column;
   border-width: 2px;
   border-style: solid;
   border-color: black;
   width: 80%;
   margin: auto;
   margin-top: 150px;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   padding: 20px;
   align-content: center;
 }
