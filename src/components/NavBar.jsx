@@ -2,20 +2,20 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {
-    let navigate = useNavigate();
-    const changePage = (route) => {
-       navigate(route);
-   } 
+  let navigate = useNavigate();
+  const changePage = (route) => {
+    navigate(route);
+  };
 
   return (
-    <div>
-      <button className="navbutton" onClick={() => changePage("/profile")}>
+    <div className="nav-options">
+      <button className="nav-item" onClick={() => changePage("/profile")}>
         Profile
       </button>
-      <button className="navbutton" onClick={() => changePage("/browse")}>
+      <button className="nav-item" onClick={() => changePage("/browse")}>
         Browse
       </button>
-      <button className="navbutton" onClick={() => changePage("/matches")}>
+      <button className="nav-item" onClick={() => changePage("/matches")}>
         Matches
       </button>
     </div>

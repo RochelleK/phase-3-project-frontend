@@ -1,9 +1,30 @@
-import React from 'react'
+import React, { useState } from "react";
+import EditProfile from "./EditProfile";
 
-function ProfileCard() {
+function ProfileCard({ user }) {
+  const [showProfile, setShowProfile] = useState(true);
   return (
-    <div>ProfileCard</div>
-  )
+    <>
+      {showProfile ? (
+        <div className="profile-card-div">
+          {user.name}
+          {user.location}
+          <button onClick={() => setShowProfile(!showProfile)}>
+            {" "}
+            Edit Profile
+          </button>
+        </div>
+      ) : (
+        <div className="profile-card-div">
+          <button onClick={() => setShowProfile(!showProfile)}>
+            {" "}
+            Submit Changes
+          </button>
+          <EditProfile />
+        </div>
+      )}
+    </>
+  );
 }
 
-export default ProfileCard
+export default ProfileCard;

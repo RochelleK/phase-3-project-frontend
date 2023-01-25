@@ -1,10 +1,10 @@
 import React from "react";
 
-function Preferences() {
+function EditProfile() {
   return (
-    <div id="form">
-      <form className="form">
-        <p className="form-title">Preferences</p>
+    <div id="form-2-div">
+      <form className="form-2">
+        <p className="form-title">My Profile</p>
         <div>
           <label className="form-text">I Am A </label>
           <select name="cars" id="cars">
@@ -24,7 +24,7 @@ function Preferences() {
           </select>
         </div>
         <div>
-          <label className="form-text">Living In </label>
+          <label className="form-text">Location </label>
           <select name="cars" id="cars">
             <option value="volvo">NYC</option>
             <option value="saab">LA</option>
@@ -41,9 +41,7 @@ function Preferences() {
         </div>
 
         <div className="slider">
-          <label className="form-text" htmlFor="water">
-            Age
-          </label>
+          <label className="form-text">Age</label>
           <input id="range" type="range" value="number" />
         </div>
 
@@ -57,10 +55,41 @@ function Preferences() {
           </label>
           <input className="checkbox" type="checkbox" />
         </div>
-        <button id="form-submit">Submit</button>
+        <div>
+          <label className="form-text" htmlFor="water">
+            Profile Pic
+          </label>
+          <input id="text-box" type="file" />
+        </div>
+        <div>
+          <label className="form-text" htmlFor="water">
+            Prompt 1
+          </label>
+          <input id="text-box" type="text-box" />
+        </div>
+        <div>
+          <label className="form-text" htmlFor="water">
+            Prompt 2
+          </label>
+          <input id="text-box" type="text-box" />
+        </div>
+        <div>
+          <label className="form-text" htmlFor="water">
+            Prompt 3
+          </label>
+          <input id="text-box" type="text-box" />
+        </div>
+
+        <div>
+          <label className="form-text" htmlFor="water">
+            Favorite Meme
+          </label>
+          <input id="text-box" type="file" />
+        </div>
+        <button id="form-submit">Edit Profile</button>
       </form>
     </div>
   );
 }
 
-export default Preferences;
+export default EditProfile;

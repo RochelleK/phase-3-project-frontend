@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 
-function Match({match}) {
+function Match({ match, startChat }) {
+  
 
   return (
-    <div className="match">
-      <img src="./assets/blind-date.png" />
-      <h1>{match.name}</h1>
-      <h1>{match.bio}</h1>
+    <div>
+      <div className="match wrapper">
+        <img src={match.profile_image} />
+        <p className="name">{match.name}</p>
+        <button type="button" class="btn" onClick={()=>startChat(match)}>
+          Let's Chat!
+        </button>
+      </div>
     </div>
   );
 }
