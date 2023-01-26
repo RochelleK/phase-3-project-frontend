@@ -5,6 +5,7 @@ function EditProfile() {
   const [interest, setInterest] = useState("All");
   const [location, setLocation] = useState("NYC");
   const [political, setPolitical] = useState("Liberal");
+  const [bio, setBio] = useState("");
   const [smoker, setSmoker] = useState(false);
   const [drinker, setDrinker] = useState(false);
   const [profilePic, setProfilePic] = useState("");
@@ -13,9 +14,9 @@ function EditProfile() {
   const [prompt3, setPrompt3] = useState("");
   const [meme, setMeme] = useState("");
 
-  const updateProfile = (e) =>{
-    e.preventDefault()
-    console.log("form submitted")
+  const updateProfile = (e) => {
+    e.preventDefault();
+    console.log("form submitted");
 
     fetch(`http://localhost:9292/users/${1}`, {
       method: "PATCH",
@@ -26,7 +27,7 @@ function EditProfile() {
         smoking: smoker,
         drinking: drinker,
         political: political,
-        // bio
+        bio: bio,
         prompt_1: prompt1,
         prompt_2: prompt2,
         prompt_3: prompt3,
@@ -38,8 +39,13 @@ function EditProfile() {
       },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json));
-  }
+      .then((json) => console.log(json))
+      .then(e.target.reset())
+      .then(setBio(""))
+      .then(setPrompt1(""))
+      .then(setPrompt2(""))
+      .then(setPrompt3(""))
+  };
 
   return (
     <div id="form-2-div">
@@ -103,7 +109,7 @@ function EditProfile() {
 
         <div className="checkbox-div">
           <label id="exercise" className="form-text" htmlFor="exercise">
-            Smoker? 
+            Smoker?
           </label>
           <input
             className="checkbox"
@@ -112,7 +118,7 @@ function EditProfile() {
             onChange={(e) => setSmoker(e.target.checked)}
           />
           <label id="meditation" className="form-text" htmlFor="meditation">
-            Drinker? 
+            Drinker?
           </label>
           <input
             className="checkbox"
@@ -131,7 +137,18 @@ function EditProfile() {
           />
         </div>
         <div>
-          <label className="form-text">Prompt 1 </label>
+          <label className="form-text">A little bit about me: </label>
+          <input
+            id="text-box"
+            type="text-box"
+            value={bio}
+            onChange={(e) => setBio(e.target.value)}
+          />
+        </div>
+        <div>
+          <label className="form-text">
+            What I am looking for in a relationship:{" "}
+          </label>
           <input
             id="text-box"
             type="text-box"
@@ -140,7 +157,9 @@ function EditProfile() {
           />
         </div>
         <div>
-          <label className="form-text">Prompt 2 </label>
+          <label className="form-text">
+            Some of my hobbies and passions include:{" "}
+          </label>
           <input
             id="text-box"
             type="text-box"
@@ -149,7 +168,7 @@ function EditProfile() {
           />
         </div>
         <div>
-          <label className="form-text">Prompt 3 </label>
+          <label className="form-text">Two truths and a lie: </label>
           <input
             id="text-box"
             type="text-box"
@@ -167,7 +186,7 @@ function EditProfile() {
             onChange={(e) => setMeme(e.target.value)}
           />
         </div>
-        <button id="form-submit" >Save Changes</button>
+        <button id="form-submit">Save Changes</button>
       </form>
     </div>
   );
