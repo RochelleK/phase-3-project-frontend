@@ -7,29 +7,34 @@ function ProfileCard({ user }) {
     <>
       {showProfile ? (
         <div className="profile-card-div">
-          <h1>{user.name}</h1>
-          <img src={user.profile_image} />
-          <h2>{user.gender}</h2>
-          <h2>{user.age}</h2>
-          <h2>{user.location}</h2>
-          <p>Bio: {user.bio}</p>
-          <p>What are you looking for in a relationship?: {user.prompt_1}</p>
-          <p>What are hobbies and passions?: {user.prompt_2}</p>
-          <p>Two truths and a lie: {user.prompt_3}</p>
-          <p>
-            Favorite Meme
-            <img src={user.meme} />
+          <img className="profile-image" src={user.profile_image} />
+          <div className="profile-detail">
+            <h1 className="profile_name">{user.name}</h1>
+            <h1 className="profile_age">{user.age}</h1>
+            <h1 className="profile_location">{user.location}</h1>
+          </div>
+          <p className="profile-bio">{user.bio}</p>
+          <p className="profile-prompt-title">
+            What are you looking for in a relationship?
           </p>
-          <div>
+          <p className="profile-prompt">{user.prompt_1}</p>
+          <p className="profile-prompt-title">
+            What are hobbies and passions?:
+          </p>
+          <p className="profile-prompt">{user.prompt_2}</p>
+          <p className="profile-prompt-title">Two truths and a lie:</p>
+          <p className="profile-prompt">{user.prompt_3}</p>
+
+          <div className = "profile-edit-button-div">
             {" "}
-            <button onClick={() => setShowProfile(!showProfile)}>
+            <button className = "profile-edit-button" onClick={() => setShowProfile(!showProfile)}>
               {" "}
               Edit Profile
             </button>
           </div>
         </div>
       ) : (
-        <div className="profile-card-div">
+        <div>
           <EditProfile user={user} />
         </div>
       )}
