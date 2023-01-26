@@ -9,8 +9,10 @@ function ProfileCard({ user }) {
         <div className="profile-card-div">
           <h1>{user.name}</h1>
           <img src={user.profile_image} />
+          <h2>{user.gender}</h2>
+          <h2>{user.age}</h2>
           <h2>{user.location}</h2>
-          <h3>{user.age}</h3>
+          <p>Bio: {user.bio}</p>
           <p>What are you looking for in a relationship?: {user.prompt_1}</p>
           <p>What are hobbies and passions?: {user.prompt_2}</p>
           <p>Two truths and a lie: {user.prompt_3}</p>
