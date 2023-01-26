@@ -2,18 +2,18 @@ import React, {useState} from "react";
 
 function Preferences() {
 
-const [genderPref, setGenderPref] = useState("All")
-const [locationPref, setLocationPref] = useState("NYC")
-const [politicalPref, setPoliticalPref] = useState("Liberal")
-const [smokerPref, setSmokerPref] = useState(false)
-const [drinkerPref, setDrinkerPref] = useState(false)
+const [genderPref, setGenderPref] = useState("Select")
+const [locationPref, setLocationPref] = useState("Select")
+const [politicalPref, setPoliticalPref] = useState("Select")
+const [smokerPref, setSmokerPref] = useState("")
+const [drinkerPref, setDrinkerPref] = useState("")
 
 
 const updatePrefs = (e) => {
     e.preventDefault();
     console.log("pref submitted");
     
-    fetch(`http://localhost:9292/users/${1}`, {
+    fetch(`http://localhost:9292/pref/${1}`, {
       method: "PATCH",
       body: JSON.stringify({
         gender_pref: genderPref,
@@ -30,7 +30,7 @@ const updatePrefs = (e) => {
     })
       .then((response) => response.json())
       .then((json) => console.log(json))
-      .then(e.target.reset());
+      // .then(e.target.reset());
 
   }
 
@@ -43,8 +43,6 @@ const updatePrefs = (e) => {
           <select name="gender" value={genderPref} onChange={(e)=> setGenderPref(e.target.value)}>
             <option value="Woman">Woman</option>
             <option value="Man">Man</option>
-            <option value="Non-binary"> Non-binary</option>
-            <option value="Womand and Man">Woman and Man</option>
             <option value="All">All</option>
           </select>
         </div>
