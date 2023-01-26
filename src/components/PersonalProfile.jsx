@@ -38,7 +38,7 @@ function PersonalProfile() {
             onClick={() => setIsClicked(!isClicked)}
             className="pref-button"
           >
-            Got Back to Profile
+            Back to Profile
           </button>
           <Preferences />
         </div>
