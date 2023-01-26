@@ -12,11 +12,9 @@ function PersonalProfile() {
       .then((response) => response.json())
       .then((data) => {
         setUser(data);
-        console.log(data)
+        console.log(data);
       });
   }, []);
-
-
 
   return (
     <div>
@@ -32,7 +30,7 @@ function PersonalProfile() {
           >
             Edit Preferences
           </button>
-          <ProfileCard user= {user}/>
+          <ProfileCard user={user} />
         </div>
       ) : (
         <div className="personal-div">
