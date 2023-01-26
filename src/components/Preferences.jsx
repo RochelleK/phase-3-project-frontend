@@ -1,12 +1,12 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 function Preferences() {
 
-const [genderPref, setGenderPref] = useState("Select")
-const [locationPref, setLocationPref] = useState("Select")
-const [politicalPref, setPoliticalPref] = useState("Select")
-const [smokerPref, setSmokerPref] = useState("")
-const [drinkerPref, setDrinkerPref] = useState("")
+  const [genderPref, setGenderPref] = useState("All");
+  const [locationPref, setLocationPref] = useState("NYC");
+  const [politicalPref, setPoliticalPref] = useState("Liberal");
+  const [smokerPref, setSmokerPref] = useState(false);
+  const [drinkerPref, setDrinkerPref] = useState(false);
 
 
 const updatePrefs = (e) => {
@@ -35,12 +35,14 @@ const updatePrefs = (e) => {
   }
 
   return (
-    <div id="form">
-      <form className="form" onSubmit={updatePrefs}>
+
+   <div className="profile-card-div">
+      <form onSubmit={updatePrefs}>
         <p className="form-title">Preferences</p>
         <div>
           <label className="form-text">Looking for a: </label>
           <select name="gender" value={genderPref} onChange={(e)=> setGenderPref(e.target.value)}>
+
             <option value="Woman">Woman</option>
             <option value="Man">Man</option>
             <option value="All">All</option>
@@ -48,7 +50,11 @@ const updatePrefs = (e) => {
         </div>
         <div>
           <label className="form-text">Living In </label>
-          <select name="location" value={locationPref} onChange={(e)=> setLocationPref(e.target.value)} >
+          <select
+            name="location"
+            value={locationPref}
+            onChange={(e) => setLocationPref(e.target.value)}
+          >
             <option value="NYC">NYC</option>
             <option value="LA">LA</option>
             <option value="Miami">Miami</option>
@@ -57,28 +63,41 @@ const updatePrefs = (e) => {
         </div>
         <div>
           <label className="form-text">Political View </label>
-          <select name="political" id="cars" value={politicalPref} onChange={(e)=> setPoliticalPref(e.target.value)}>
+          <select
+            name="political"
+            id="cars"
+            value={politicalPref}
+            onChange={(e) => setPoliticalPref(e.target.value)}
+          >
             <option value="Liberal">Liberal</option>
             <option value="Conservative">Conservative</option>
           </select>
         </div>
 
         <div className="slider">
-          <label className="form-text" >
-            Age
-          </label>
+          <label className="form-text">Age</label>
           <input id="range" type="range" value="number" />
         </div>
 
         <div className="checkbox-div">
-          <label id="exercise" className="form-text" >
+          <label id="exercise" className="form-text">
             Smoker?
           </label>
-          <input className="checkbox" type="checkbox" value={smokerPref} onChange={(e)=> setSmokerPref(e.target.checked)}/>
-          <label id="meditation" className="form-text" >
+          <input
+            className="checkbox"
+            type="checkbox"
+            value={smokerPref}
+            onChange={(e) => setSmokerPref(e.target.checked)}
+          />
+          <label id="meditation" className="form-text">
             Drinker?
           </label>
-          <input className="checkbox" type="checkbox" value={drinkerPref} onChange={(e)=> setDrinkerPref(e.target.checked)}/>
+          <input
+            className="checkbox"
+            type="checkbox"
+            value={drinkerPref}
+            onChange={(e) => setDrinkerPref(e.target.checked)}
+          />
         </div>
         <button id="form-submit">Submit</button>
       </form>
