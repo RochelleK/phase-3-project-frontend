@@ -117,37 +117,36 @@
   align-content: center;
 }
 
-.prof-pic {
-  display: flex;
-  height: 100px;
-  width: 100px;
-  align-self: center;
-  margin: auto;
-}
-
-.browse-container {
-  display: flex;
-  padding: 30px;
-}
-
-.browse-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.browse-meme {
-  display: flex;
-  margin: auto;
-  height: 300px;
-}
-
 .browse-buttons {
   display: flex;
-  padding-top: 20px;
+  height: 8rem;
+  padding: 20px;
 }
 
+.browse-buttons button {
+  display: flex;
+  height: 5rem;
+  width: 5rem;
+  margin: auto;
+  border-radius: 100%;
+  border-style: dotted;
+  border-color: #D4BBDD;
+  border-width: .5px;
+}
+
+.browse-buttons button:hover{
+  display: flex;
+  height: 5rem;
+  width: 5rem;
+  margin: auto;
+  border-radius: 100%;
+  background-color: #D4BBDD;
+}
+
+
 .browse-buttons img {
-  height: 50px;
+  height: 4rem;
+  width: 4rem;
   margin: auto;
 }
 
@@ -279,8 +278,10 @@
 }
 
 .profile-card-div {
+  display: flex;
+  flex-direction: column;
   border: 4px black solid;
-  height: 62rem;
+  height: auto;
   width: 50rem;
   margin-left: 30rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -337,6 +338,7 @@
   font-family: "ProximaNova";
   font-size: 26px;
   margin-bottom: 1rem;
+  padding: 1rem;
   color: rgb(0, 0, 0);
   text-align: center;
 }

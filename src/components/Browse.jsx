@@ -47,45 +47,29 @@ function Browse() {
     <div>
       <Header />
       <br />
-      <div className="browse">
-        Browse Your Dating Pool
-        <div>
-          <img
-            className="prof-pic"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Twemoji_1f600.svg/1200px-Twemoji_1f600.svg.png"
-          />
-          <div className="browse-container">
-            <div className="browse-details">
-              <h1>{potentialMatch.name}</h1>
-              <h3>Gender: {potentialMatch.gender}</h3>
-              <h3>Age: {potentialMatch.age}</h3>
-              <h3>Location: {potentialMatch.location}</h3>
-              <h3>Bio: {potentialMatch.bio}</h3>
-              <h3>What are you looking for in a relationship?</h3>
-              <h4>{potentialMatch.prompt_1}</h4>
-              <h3>What are hobbies and passions?</h3>
-              <h4>{potentialMatch.prompt_2}</h4>
-              <h3>Two truths and a lie:</h3>
-              <h4>{potentialMatch.prompt_3}</h4>
-            </div>
-            <div className="browse-meme">
-              <img src={potentialMatch.meme} />
-            </div>
+      <div className="profile-card-div">      
+          <img className="profile-image" src={potentialMatch.meme}/>
+          <div className="profile-detail">
+            <h1 className="profile_name">{potentialMatch.name}</h1>
+            <h1 className="profile_age"> {potentialMatch.age}</h1>
+            <h1 className="profile_age">{potentialMatch.gender}</h1>
+            <h1 className="profile_location">{potentialMatch.location}</h1>
           </div>
+            <p className="profile-bio">{potentialMatch.bio}</p>
+            <p className="profile-prompt-title">What are you looking for in a relationship?</p>
+            <p className="profile-prompt">{potentialMatch.prompt_1}</p>
+            <p className="profile-prompt-title">What are hobbies and passions?</p>
+            <p className="profile-prompt">{potentialMatch.prompt_2}</p>
+            <p className="profile-prompt-title">Two truths and a lie:</p>
+            <p className="profile-prompt">{potentialMatch.prompt_3}</p>          
           <div className="browse-buttons">
             <button onClick={handleReject}>
-              <img
-                src="/assets/delete.png"
-                alt="https://www.flaticon.com/free-icons/cross"
-                />
+              <img src="/assets/delete.png" alt="https://www.flaticon.com/free-icons/cross"/>
             </button>
-            <img
-                onClick={()=>handleAccept(potentialMatch)}
-              src="/assets/check.png"
-              alt="https://www.flaticon.com/free-icons/foursquare-check-in"
-            />
-          </div>
-        </div>
+            <button onClick={()=>handleAccept(potentialMatch)}>
+              <img src="/assets/check.png" alt="https://www.flaticon.com/free-icons/foursquare-check-in"/>
+            </button>
+          </div>        
       </div>
     </div>
   );
