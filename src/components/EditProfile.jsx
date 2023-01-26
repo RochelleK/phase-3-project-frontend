@@ -13,21 +13,37 @@ function EditProfile() {
   const [prompt3, setPrompt3] = useState("");
   const [meme, setMeme] = useState("");
 
-  fetch("https://jsonplaceholder.typicode.com/posts/1", {
-    method: "PATCH",
-    body: JSON.stringify({
-      title: "foo",
-    }),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  })
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+  const updateProfile = (e) =>{
+    e.preventDefault()
+    console.log("form submitted")
+
+    fetch(`http://localhost:9292/users/${1}`, {
+      method: "PATCH",
+      body: JSON.stringify({
+        location: location,
+        // age: age,
+        gender: gender,
+        smoking: smoker,
+        drinking: drinker,
+        political: political,
+        // bio
+        prompt_1: prompt1,
+        prompt_2: prompt2,
+        prompt_3: prompt3,
+        meme: meme,
+        profile_image: profilePic,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+  }
 
   return (
     <div id="form-2-div">
-      <form className="form-2">
+      <form className="form-2" onSubmit={updateProfile}>
         <p className="form-title">My Profile</p>
         <div>
           <label className="form-text">Gender Idenity</label>
@@ -48,7 +64,7 @@ function EditProfile() {
             value={interest}
             onChange={(e) => setInterest(e.target.value)}
           >
-            <option value="Womand">Woman</option>
+            <option value="Woman">Woman</option>
             <option value="Man">Man</option>
             <option value="Non-binary"> Non-binary</option>
             <option value="Woman and Man">Woman and Man</option>
@@ -151,7 +167,7 @@ function EditProfile() {
             onChange={(e) => setMeme(e.target.value)}
           />
         </div>
-        <button id="form-submit">Edit Profile</button>
+        <button id="form-submit" >Save Changes</button>
       </form>
     </div>
   );

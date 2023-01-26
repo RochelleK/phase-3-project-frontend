@@ -12,7 +12,7 @@ function Matches() {
   const [match, setMatch] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:9292/confirmedmatches")
+    fetch("http://localhost:9292/users")
       .then((res) => res.json())
       .then((json) => {
         setMatches(json);
