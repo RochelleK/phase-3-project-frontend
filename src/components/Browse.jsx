@@ -30,8 +30,9 @@ function Browse() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        likee_id: match.id,
         liker_id: 1,
+        likee_id: match.id,
+        match_status: true,
       }),
     }).then((r) => r.json());
     // .then(setCurrentPotentialMatch(currentPotentialMatch+1));
