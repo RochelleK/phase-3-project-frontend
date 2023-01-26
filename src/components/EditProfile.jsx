@@ -13,6 +13,7 @@ function EditProfile() {
   const [prompt2, setPrompt2] = useState("");
   const [prompt3, setPrompt3] = useState("");
   const [meme, setMeme] = useState("");
+  const [age, setAge] = useState(30)
 
   const updateProfile = (e) => {
     e.preventDefault();
@@ -22,7 +23,7 @@ function EditProfile() {
       method: "PATCH",
       body: JSON.stringify({
         location: location,
-        // age: age,
+        age: age,
         gender: gender,
         smoking: smoker,
         drinking: drinker,
@@ -103,8 +104,17 @@ function EditProfile() {
         </div>
 
         <div className="slider">
-          <label className="form-text">Age</label>
-          <input id="range" type="range" value="number" />
+          <label className="form-text">Slide to set Age: </label>
+          <input
+            id="range"
+            type="range"
+            value={age}
+            onChange={(e) => setAge(e.target.valueAsNumber)}
+            max={90}
+            // style={getBackgroundSizeWater()}
+          />
+
+          <p className="range-value">Age: {age}</p>
         </div>
 
         <div className="checkbox-div">

@@ -9,25 +9,38 @@ const [smokerPref, setSmokerPref] = useState(false)
 const [drinkerPref, setDrinkerPref] = useState(false)
 
 
-  fetch("https://jsonplaceholder.typicode.com/posts/1", {
-    method: "PATCH",
-    body: JSON.stringify({
-      title: "foo",
-    }),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  })
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+const updatePrefs = (e) => {
+    e.preventDefault();
+    console.log("pref submitted");
+    
+    fetch(`http://localhost:9292/users/${1}`, {
+      method: "PATCH",
+      body: JSON.stringify({
+        gender_pref: genderPref,
+        // age_min_pref: age_min_pref,
+        // age_max_pref: age_max_pref,
+        location_pref: locationPref,
+        smoking_pref: smokerPref,
+        drinking_pref: drinkerPref,
+        political_pref: politicalPref,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => console.log(json))
+      .then(e.target.reset());
+
+  }
 
   return (
     <div id="form">
-      <form className="form">
+      <form className="form" onSubmit={updatePrefs}>
         <p className="form-title">Preferences</p>
         <div>
-          <label className="form-text">Looking for A </label>
-          <select name="gender" value={setGenderPref} onChange={(e)=> setGenderPref(e.target.value)}>
+          <label className="form-text">Looking for a: </label>
+          <select name="gender" value={genderPref} onChange={(e)=> setGenderPref(e.target.value)}>
             <option value="Woman">Woman</option>
             <option value="Man">Man</option>
             <option value="Non-binary"> Non-binary</option>
