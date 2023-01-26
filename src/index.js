@@ -8,6 +8,7 @@ import PersonalProfile from './components/PersonalProfile';
 import Matches from './components/Matches';
 import Home from './components/Home';
 import Browse from './components/Browse';
+import Chat from './components/Chat';
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <div>404 NOT FOUND</div>,
+  },
+  {
+    path: "/chat",
+    element: <Chat/>,
   },
 ]);
 

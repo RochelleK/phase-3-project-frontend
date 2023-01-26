@@ -35,7 +35,7 @@ function Matches() {
       <Header />
       <MatchCarousel startChat={startChat} beltPosition={beltPosition} setBeltPosition={setBeltPosition}  matches = {matches.slice(beltPosition, beltPosition+4)}/>
       <div className='belt'>
-      <MatchCards match={match}/>
+      <MatchCards match={match} setMatch={match}/>
       <Chat match={match}/>
 
       </div>
