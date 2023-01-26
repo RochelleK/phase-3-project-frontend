@@ -39,7 +39,12 @@ function EditProfile() {
       },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((json) => console.log(json))
+      .then(e.target.reset())
+      .then(setBio(""))
+      .then(setPrompt1(""))
+      .then(setPrompt2(""))
+      .then(setPrompt3(""))
   };
 
   return (
@@ -137,7 +142,7 @@ function EditProfile() {
             id="text-box"
             type="text-box"
             value={bio}
-            onChange={(e) => setPrompt1(e.target.value)}
+            onChange={(e) => setBio(e.target.value)}
           />
         </div>
         <div>
