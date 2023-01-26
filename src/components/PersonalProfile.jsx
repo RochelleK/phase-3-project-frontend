@@ -18,7 +18,7 @@ function PersonalProfile() {
 
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       {isClicked ? (
         <div className="personal-div">
           <button
@@ -38,7 +38,7 @@ function PersonalProfile() {
             onClick={() => setIsClicked(!isClicked)}
             className="pref-button"
           >
-            Got Back to Profile
+            Back to Profile
           </button>
           <Preferences />
         </div>
