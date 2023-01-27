@@ -18,7 +18,7 @@ function PersonalProfile() {
 
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       {isClicked ? (
         <div className="personal-div">
           <button
