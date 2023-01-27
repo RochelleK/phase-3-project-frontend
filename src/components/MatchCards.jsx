@@ -17,13 +17,12 @@ function MatchCards({ match }) {
       <div className="form">
         THIS IS THE PROFILE FOR THE MATCH
         <br></br>
-        <img src={meme} />
-        <p>NAME: {name}</p>
+        <img src={profile_image} />
+        <p >NAME: {name}</p>
         <p>AGE: {age}</p>
         <p>Location: {location}</p>
         <p>Bio: {bio}</p>
         <p></p>
-        
       </div>
     </div>
   );

@@ -1,29 +1,21 @@
-
-
-
-.belt {
-  grid-area: bt;
-  display: flex;
-  justify-content: space-evenly;
-}
-
 .match {
-
-  border: 1px #cde2ff solid;
+  border: 1px #f3f2f6 solid;
   border-radius: 50px;
-  background-color: #cde2ff;
+  background-color: #f3f2f6;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  padding: 1rem 6rem;
   margin-top: 2.5rem;
-  height: max-content;
-
+  width: 364px;
+  height: 550px;
+  margin-left: 4rem;
 }
 
-.match img {
-  max-height: 300px;
-  max-width: 100px;
+.match-card-image {
+  width: 360px;
+  height: 430px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 
 .chatbox {
@@ -38,7 +30,7 @@
   height: max-content;
 }
 
-.wrapper {
+/* .wrapper {
   width: 320px;
   height: 250px;
   background: #fdfeff;
@@ -46,10 +38,4 @@
   border-radius: 10px;
   padding: 20px 20px 20px 20px;
   box-shadow: 0 8px 40px rgba(#000000, 0.2);
-}
-
-/* img {
-  max-width: 100px;
-  max-height: 100px;
-}
- */
+} */

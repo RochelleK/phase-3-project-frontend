@@ -28,15 +28,17 @@ function Matches() {
   return (
     <div>
       <Header />
-      <MatchCarousel
-        startChat={startChat}
-        beltPosition={beltPosition}
-        setBeltPosition={setBeltPosition}
-        matches={matches.slice(beltPosition, beltPosition + 4)}
-      />
-      <div className="belt">
-        <MatchCards match={match} setMatch={match} />
-        <Chat match={match} />
+      <div className="matches-main-div">
+        <MatchCarousel
+          startChat={startChat}
+          beltPosition={beltPosition}
+          setBeltPosition={setBeltPosition}
+          matches={matches.slice(beltPosition, beltPosition + 4)}
+        />
+        <div className="match-chat-div">
+          <MatchCards match={match} setMatch={match} />
+          <Chat match={match} />
+        </div>
       </div>
     </div>
   );
