@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 
 function Preferences() {
-
   const [genderPref, setGenderPref] = useState("All");
   const [locationPref, setLocationPref] = useState("NYC");
   const [politicalPref, setPoliticalPref] = useState("Liberal");
   const [smokerPref, setSmokerPref] = useState(false);
   const [drinkerPref, setDrinkerPref] = useState(false);
+  const [minAge, setMinAge] = useState(18);
+  const [maxAge, setMaxAge] = useState(18);
 
-
-const updatePrefs = (e) => {
+  const updatePrefs = (e) => {
     e.preventDefault();
     console.log("pref submitted");
-    
+
     fetch(`http://localhost:9292/pref/${1}`, {
       method: "PATCH",
       body: JSON.stringify({
         gender_pref: genderPref,
-        // age_min_pref: age_min_pref,
-        // age_max_pref: age_max_pref,
+        age_min_pref: minAge,
+        age_max_pref: maxAge,
         location_pref: locationPref,
         smoking_pref: smokerPref,
         drinking_pref: drinkerPref,
@@ -29,28 +29,31 @@ const updatePrefs = (e) => {
       },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json))
-      // .then(e.target.reset());
-
-  }
+      .then((json) => console.log(json));
+    // .then(e.target.reset());
+  };
 
   return (
-
-   <div className="profile-card-div">
-      <form onSubmit={updatePrefs}>
-        <p className="form-title">Preferences</p>
-        <div>
-          <label className="form-text">Looking for a: </label>
-          <select name="gender" value={genderPref} onChange={(e)=> setGenderPref(e.target.value)}>
-
+    <div className="profile-card-div-pref">
+      <form className="form" onSubmit={updatePrefs}>
+        <p className="form-title">Discovery Settings</p>
+        <div className="form-sections">
+          <label className="form-text">Gender Preference </label>
+          <select
+            name="gender"
+            value={genderPref}
+            onChange={(e) => setGenderPref(e.target.value)}
+            className="dropdown"
+          >
             <option value="Woman">Woman</option>
             <option value="Man">Man</option>
             <option value="All">All</option>
           </select>
         </div>
-        <div>
-          <label className="form-text">Living In </label>
+        <div className="form-sections">
+          <label className="form-text">Location </label>
           <select
+            className="dropdown"
             name="location"
             value={locationPref}
             onChange={(e) => setLocationPref(e.target.value)}
@@ -61,9 +64,10 @@ const updatePrefs = (e) => {
             <option value="Anywhere">Anywhere</option>
           </select>
         </div>
-        <div>
+        <div className="form-sections">
           <label className="form-text">Political View </label>
           <select
+            className="dropdown"
             name="political"
             id="cars"
             value={politicalPref}
@@ -74,12 +78,33 @@ const updatePrefs = (e) => {
           </select>
         </div>
 
-        <div className="slider">
-          <label className="form-text">Age</label>
-          <input id="range" type="range" value="number" />
+        <div className="form-sections-two">
+          <label className="form-text">Min Age</label>
+          <input
+            id="range"
+            type="range"
+            value={minAge}
+            onChange={(e) => setMinAge(e.target.valueAsNumber)}
+            min={18}
+            max={100}
+          />
+          <p className="range-text">{minAge}</p>
         </div>
 
-        <div className="checkbox-div">
+        <div className="form-sections-two">
+          <label className="form-text">Max Age</label>
+          <input
+            id="range"
+            type="range"
+            value={maxAge}
+            onChange={(e) => setMaxAge(e.target.valueAsNumber)}
+            min={18}
+            max={100}
+          />
+          <p className="range-text">{maxAge}</p>
+        </div>
+
+        <div className="form-sections">
           <label id="exercise" className="form-text">
             Smoker?
           </label>
@@ -89,7 +114,7 @@ const updatePrefs = (e) => {
             value={smokerPref}
             onChange={(e) => setSmokerPref(e.target.checked)}
           />
-          <label id="meditation" className="form-text">
+          <label id="drinker" className="form-text">
             Drinker?
           </label>
           <input
