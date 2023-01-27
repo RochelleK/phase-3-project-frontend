@@ -37,8 +37,9 @@ function ProfileCard({ user }) {
           </div>
         </div>
       ) : (
-        <div className="profile-card-div-pref-two">
-          <EditProfile user={user} />
+        <div>
+          <EditProfile user={user} showProfile={showProfile} setShowProfile={setShowProfile}/>
+
         </div>
       )}
     </>

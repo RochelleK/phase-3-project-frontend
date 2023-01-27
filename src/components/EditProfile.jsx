@@ -1,19 +1,30 @@
 import React, { useState } from "react";
 
-function EditProfile() {
+function EditProfile({ showProfile, setShowProfile}) {
   const [gender, setGender] = useState("Woman");
   const [interest, setInterest] = useState("All");
   const [location, setLocation] = useState("NYC");
   const [political, setPolitical] = useState("Liberal");
-  const [bio, setBio] = useState("");
+  const [bio, setBio] = useState(
+    "I am a musician from nyc looking for love in the big city"
+  );
   const [smoker, setSmoker] = useState(false);
   const [drinker, setDrinker] = useState(false);
-  const [profilePic, setProfilePic] = useState("");
-  const [prompt1, setPrompt1] = useState("");
-  const [prompt2, setPrompt2] = useState("");
-  const [prompt3, setPrompt3] = useState("");
-  const [meme, setMeme] = useState("");
-  const [age, setAge] = useState(30);
+  const [profilePic, setProfilePic] = useState(
+""  );
+  const [prompt1, setPrompt1] = useState(
+    "I am looking for a long term relatioship with someone who wants to love me for who I am on the inside."
+  );
+  const [prompt2, setPrompt2] = useState(
+    "In my freetime you can find me traveling the world and eating amazing food. I love an adventure."
+  );
+  const [prompt3, setPrompt3] = useState(
+    "I am the queen of Wakanda. I have three siblings. I've been to the grammys"
+  );
+  const [meme, setMeme] = useState(
+""  );
+  const [age, setAge] = useState(30)
+
 
   const updateProfile = (e) => {
     e.preventDefault();
@@ -203,6 +214,9 @@ function EditProfile() {
         </div>
         <button id="form-submit">Submit</button>
       </form>
+        <button id="form-submit" onClick={() => setShowProfile(true)}>
+          Go Back
+        </button>
     </div>
   );
 }
