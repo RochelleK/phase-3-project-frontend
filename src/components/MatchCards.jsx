@@ -1,4 +1,5 @@
 import React from "react";
+import Chat from "./Chat";
 
 function MatchCards({ match }) {
   const {
@@ -13,7 +14,7 @@ function MatchCards({ match }) {
     profile_image,
   } = match;
   return (
-    <div>
+    <div className="match-chat-div-2">
       <div className="form">
         <p>{name}</p>
         <br></br>
@@ -26,6 +27,10 @@ function MatchCards({ match }) {
         <p>{prompt_3}</p>
         <p></p>
       </div>
+      { match == [] ?
+      <></> :
+      <Chat match={match} /> 
+    }
     </div>
   );
 }

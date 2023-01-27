@@ -7,7 +7,7 @@ function Home() {
       <Header />
       <div>
         <video id="video" muted autoPlay={"autopnpmlay"} preload="auto" loop>
-          <source src="assets/video3.mp4" type="video/mp4" />
+          <source src="assets/ocean.mp4" type="video/mp4" />
         </video>
       </div>
       <div>

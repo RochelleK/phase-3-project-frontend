@@ -289,6 +289,26 @@
   width: 200px;
   margin-bottom: 1.5rem;
   margin-top: 4rem;
+  margin-left: 20rem;
+  text-align: center;
+}
+
+#form-submit-two {
+  margin-top: 1.5rem;
+  background-color: #e2c4ff;
+  border: #e2c4ff;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  color: white;
+  font-size: 35px;
+  font-weight: 800;
+  height: 50px;
+  width: 200px;
+  margin-bottom: 1.5rem;
+  margin-top: 23.23rem;
+  margin-left: 25rem;
   text-align: center;
 }
 
@@ -302,7 +322,7 @@
   background-color: #e2c4ff;
   border: #e2c4ff;
   border-radius: 5px;
-  margin-left: 20rem;
+
   font-size: 30px;
   margin-top: 2rem;
 }
@@ -312,19 +332,30 @@
   flex-direction: column;
   display: flex;
   flex-direction: row;
-  height: 114vh;
-  width: 100vw;
+  height: 110vh;
+  width: 90vw;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-left: 20rem;
+}
+
+.personal-div-two {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  height: 110vh;
+  width: 90vw;
   align-content: center;
   flex-wrap: wrap;
 }
-
 .profile-card-div {
   display: flex;
   flex-direction: column;
   border: 4px black solid;
   height: 63rem;
   width: 50rem;
-  margin-left: 29rem;
+  margin-left: 28rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -339,7 +370,7 @@
   border: 4px black solid;
   height: 63rem;
   width: 50rem;
-  margin-left: 29rem;
+  margin-left: 28rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -482,13 +513,19 @@
   width: 20rem;
 }
 
+.profile-image-two {
+  width: 80rem;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+}
+
 .browse-card-div {
   display: flex;
   flex-direction: column;
   border: 4px black solid;
-  height: 63rem;
-  width: 50rem;
-  margin-left: 66rem;
+  height: 70rem;
+  width: 80rem;
+  margin-left: 52rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -496,6 +533,32 @@
   border: #bbb5d7;
   border-radius: 60px;
   overflow-y: scroll;
+}
+
+.profile-bio-two {
+  font-family: "ProximaNova";
+  font-size: 33px;
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: 800;
+}
+
+.profile-prompt-two {
+  font-family: "ProximaNova";
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-size: 30px;
+  text-align: center;
+}
+
+.profile-prompt-title-two {
+  font-family: "ProximaNova";
+  text-align: center;
+  font-size: 30px;
+  margin-top: 1rem;
 }
 
 .matches-main-div {
@@ -512,13 +575,13 @@
 .match-chat-div {
   display: flex;
   justify-content: center;
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 
 .match-button {
   height: 150px;
   width: 150px;
-  margin-top: 15rem;
+  margin-top: 10rem;
   margin-left: 2rem;
 }
 
@@ -578,4 +641,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.match-chat-div-2 {
+  display: flex;
 }
