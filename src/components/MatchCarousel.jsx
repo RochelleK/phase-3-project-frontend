@@ -12,7 +12,7 @@ function MatchCarousel({ matches, setBeltPosition, beltPosition, startChat }) {
         <Match key={match.id} match={match} startChat={startChat} />
       ))}
       <img
-        src="/assets/next.png"
+        src="/assets/next2.png"
         className="match-button"
         onClick={addMoreMatches}
       />
