@@ -6,8 +6,10 @@ function Preferences() {
   const [politicalPref, setPoliticalPref] = useState("Liberal");
   const [smokerPref, setSmokerPref] = useState(false);
   const [drinkerPref, setDrinkerPref] = useState(false);
-  const [minAge, setMinAge] = useState(18);
-  const [maxAge, setMaxAge] = useState(18);
+  const [minAge, setMinAge] = useState(27);
+  const [maxAge, setMaxAge] = useState(60);
+
+  
 
   const updatePrefs = (e) => {
     e.preventDefault();
