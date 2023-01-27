@@ -15,15 +15,16 @@ function MatchCards({ match }) {
   return (
     <div>
       <div className="form">
-        THIS IS THE PROFILE FOR THE MATCH
+        <p>{name}</p>
         <br></br>
-        <img src={meme} />
-        <p>NAME: {name}</p>
-        <p>AGE: {age}</p>
-        <p>Location: {location}</p>
-        <p>Bio: {bio}</p>
+        <img src={profile_image} />
+        <p>{age}</p>
+        <p>{location}</p>
+        <p>{bio}</p>
+        <p>{prompt_1}</p>
+        <p>{prompt_2}</p>
+        <p>{prompt_3}</p>
         <p></p>
-        
       </div>
     </div>
   );
