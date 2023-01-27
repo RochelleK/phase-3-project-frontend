@@ -206,11 +206,11 @@ function EditProfile({ showProfile, setShowProfile}) {
             onChange={(e) => setMeme(e.target.value)}
           />
         </div>
+        <button id="form-submit">Save Changes</button>
+      </form>
         <button id="form-submit" onClick={() => setShowProfile(true)}>
           Go Back
         </button>
-        <button id="form-submit">Save Changes</button>
-      </form>
     </div>
   );
 }
