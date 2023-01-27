@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-function Match({ match, startChat }) {
+function Match({ match, startChat, updateMatches, setMatches}) {
 
   const deleteMatch=()=>{
     console.log("deleted"+ match.id)
-    fetch(`http://localhost:9292/confirmedmatches/${match.id}`, {
+    fetch(`http://localhost:9292/delete/${match.id}`, {
       method: "DELETE",
     })
-    
+    .then(setMatches(updateMatches))
+    .then(console.log(updateMatches))
+    .then( 
+    fetch("http://localhost:9292/confirmedmatches")
+      .then((res) => res.json())
+      .then((json) => {
+        setMatches(json);
+        console.log(updateMatches);
+      })
+  )
+
+    // )
   }
   
   return (

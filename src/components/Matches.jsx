@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import MatchCarousel from "./MatchCarousel";
-import Chat from "./Chat";
 import MatchCards from "./MatchCards";
+import Chat from "./Chat";
 
 function Matches() {
   const [matches, setMatches] = useState([]);
@@ -22,10 +22,12 @@ function Matches() {
   console.log(matches);
 
   function startChat(match) {
-    console.log(match);
     setMatch(match);
+
     setShowChat(true)
+
   }
+
 
   return (
     <div>
@@ -36,10 +38,14 @@ function Matches() {
           beltPosition={beltPosition}
           setBeltPosition={setBeltPosition}
           matches={matches.slice(beltPosition, beltPosition + 4)}
+          updateMatches={matches}
+          setMatches={setMatches}
         />
         <div className="match-chat-div">
           <MatchCards match={match} setMatch={match} />
+
           {!showChat ? null : <Chat match={match} />}
+
         </div>
       </div>
     </div>
