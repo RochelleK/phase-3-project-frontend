@@ -7,7 +7,8 @@ import MatchCards from "./MatchCards";
 function Matches() {
   const [matches, setMatches] = useState([]);
   const [beltPosition, setBeltPosition] = useState(0);
-  const [match, setMatch] = useState([]);
+  const [match, setMatch] = useState({});
+  const [showChat, setShowChat] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:9292/confirmedmatches")
@@ -23,6 +24,7 @@ function Matches() {
   function startChat(match) {
     console.log(match);
     setMatch(match);
+    setShowChat(true)
   }
 
   return (
@@ -37,7 +39,7 @@ function Matches() {
         />
         <div className="match-chat-div">
           <MatchCards match={match} setMatch={match} />
-          <Chat match={match} />
+          {!showChat ? null : <Chat match={match} />}
         </div>
       </div>
     </div>
