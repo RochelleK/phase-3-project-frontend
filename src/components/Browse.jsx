@@ -1,29 +1,48 @@
-import React, { useState, useEffect } from 'react'
-import Header from './Header'
+import React, { useState, useEffect } from "react";
+import Header from "./Header";
 
 function Browse() {
-  
-  const [potentialMatches, setPotentialMatches] = useState([])
-  const [currentPotentialMatch, setCurrentPotentialMatch] = useState(0)
+  const [potentialMatches, setPotentialMatches] = useState([]);
+  const [currentPotentialMatch, setCurrentPotentialMatch] = useState(0);
 
   // function nextProfile(){
   //   setCurrentPotentialMatch(currentPotentialMatch ++)
   // }
 
+
   useEffect(() =>{
-    fetch("http://localhost:9292/users")
+    fetch("http://localhost:9292/users/potential")
     .then ((response) => response.json())
     .then ((response) => {setPotentialMatches(response)})
+
   }, []);
-  
-  console.log(potentialMatches)
-  const potentialMatch = potentialMatches[currentPotentialMatch]
-  console.log(potentialMatch)
 
-  //handles the async request to avoid an "undefined" error
-  if (!potentialMatches[currentPotentialMatch]) return null
+  console.log(potentialMatches);
+  const potentialMatch = potentialMatches[currentPotentialMatch];
+  console.log(potentialMatch);
 
-  function handleAccept(match){
+  //this line of code handles the async request to avoid an "undefined" error:
+  //if (!potentialMatches[currentPotentialMatch]) return null
+
+  //Out-of-Potential-Matches Error handler
+  if (!potentialMatches[currentPotentialMatch]) return (
+    <div>
+       <Header />
+       <div>
+        <video id="empty-beach" muted autoplay={"autopnpmlay"} preload="auto" loop>
+          <source src="assets/beach_placeholder.mov" type="video/mp4"/>
+        </video>
+       </div>
+       <div className='no-more-potential'>
+        <h1 className='error-tagline'>Sorry, you're out of potential matches...</h1>
+        <br />
+        <h3 className='error-tagline'>please try again later</h3>
+       </div>
+    </div>
+  )
+
+
+  function handleAccept(match) {
     fetch("http://localhost:9292/newmatch", {
       method: "POST",
       headers: {
@@ -36,43 +55,50 @@ function Browse() {
       }),
     }).then((r) => r.json());
     // .then(setCurrentPotentialMatch(currentPotentialMatch+1));
-    setCurrentPotentialMatch(currentPotentialMatch+1)
+    setCurrentPotentialMatch(currentPotentialMatch + 1);
   }
 
-  function handleReject(){
+  function handleReject() {
     setCurrentPotentialMatch(currentPotentialMatch + 1);
   }
 
   return (
-    <div>
+    <div className="personal-div">
       <Header />
-      <br />
-      <div className="profile-card-div">      
-          <img className="profile-image" src={potentialMatch.meme}/>
-          <div className="profile-detail">
-            <h1 className="profile_name">{potentialMatch.name}</h1>
-            <h1 className="profile_age"> {potentialMatch.age}</h1>
-            <h1 className="profile_age">{potentialMatch.gender}</h1>
-            <h1 className="profile_location">{potentialMatch.location}</h1>
-          </div>
-            <p className="profile-bio">{potentialMatch.bio}</p>
-            <p className="profile-prompt-title">What are you looking for in a relationship?</p>
-            <p className="profile-prompt">{potentialMatch.prompt_1}</p>
-            <p className="profile-prompt-title">What are hobbies and passions?</p>
-            <p className="profile-prompt">{potentialMatch.prompt_2}</p>
-            <p className="profile-prompt-title">Two truths and a lie:</p>
-            <p className="profile-prompt">{potentialMatch.prompt_3}</p>          
-          <div className="browse-buttons">
-            <button onClick={handleReject}>
-              <img src="/assets/delete.png" alt="https://www.flaticon.com/free-icons/cross"/>
-            </button>
-            <button onClick={()=>handleAccept(potentialMatch)}>
-              <img src="/assets/check.png" alt="https://www.flaticon.com/free-icons/foursquare-check-in"/>
-            </button>
-          </div>        
+      <div className="browse-card-div">
+        <img className="profile-image" src={potentialMatch.meme} />
+        <div className="profile-detail">
+          <h1 className="profile_name">{potentialMatch.name}</h1>
+          <h1 className="profile_age"> {potentialMatch.age}</h1>
+          <h1 className="profile_age">{potentialMatch.gender}</h1>
+          <h1 className="profile_location">{potentialMatch.location}</h1>
+        </div>
+        <p className="profile-bio">{potentialMatch.bio}</p>
+        <p className="profile-prompt-title">
+          What are you looking for in a relationship?
+        </p>
+        <p className="profile-prompt">{potentialMatch.prompt_1}</p>
+        <p className="profile-prompt-title">What are hobbies and passions?</p>
+        <p className="profile-prompt">{potentialMatch.prompt_2}</p>
+        <p className="profile-prompt-title">Two truths and a lie:</p>
+        <p className="profile-prompt">{potentialMatch.prompt_3}</p>
+        <div className="browse-buttons">
+          <button onClick={handleReject}>
+            <img
+              src="/assets/delete.png"
+              alt="https://www.flaticon.com/free-icons/cross"
+            />
+          </button>
+          <button onClick={() => handleAccept(potentialMatch)}>
+            <img
+              src="/assets/check.png"
+              alt="https://www.flaticon.com/free-icons/foursquare-check-in"
+            />
+          </button>
+        </div>
       </div>
     </div>
   );
 }
 
-export default Browse
+export default Browse;

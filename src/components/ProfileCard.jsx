@@ -25,9 +25,12 @@ function ProfileCard({ user }) {
           <p className="profile-prompt-title">Two truths and a lie:</p>
           <p className="profile-prompt">{user.prompt_3}</p>
 
-          <div className = "profile-edit-button-div">
+          <div className="profile-edit-button-div">
             {" "}
-            <button className = "profile-edit-button" onClick={() => setShowProfile(!showProfile)}>
+            <button
+              className="profile-edit-button"
+              onClick={() => setShowProfile(!showProfile)}
+            >
               {" "}
               Edit Profile
             </button>
@@ -36,6 +39,7 @@ function ProfileCard({ user }) {
       ) : (
         <div>
           <EditProfile user={user} showProfile={showProfile} setShowProfile={setShowProfile}/>
+
         </div>
       )}
     </>
