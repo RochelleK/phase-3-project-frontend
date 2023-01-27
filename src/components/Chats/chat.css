@@ -25,6 +25,7 @@ main.dark-mode {
     #030389ab 0%,
     #D4BBDD 100%
   );
+  height: 60rem;
 }
 
 /* * {
@@ -56,7 +57,7 @@ main {
 }
 
 input[type="text"] {
-  border-bottom-left-radius: 3px;
+
   background-color: #F6E6E8;
   font-size: 1rem;
   border: none;
@@ -75,7 +76,7 @@ input[type="text"]:focus {
 }
 
 button[type="submit"] {
-  border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 10px;
   font-size: 1rem;
   width: 100px;
   padding: 0.25rem;
@@ -98,18 +99,21 @@ button[type="submit"] {
 .chat-div{
   border-style: solid;
   border-width: .5px;
-  border-radius: 3px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  height: 60rem
 }
 
 .chat-header{
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-right-radius: 10px;
   padding: 0.5rem;
   color: var(--alt-font-color);
   background: var(--theme-primary-gradient);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 5rem;
 }
 
 header h1 {
@@ -158,6 +162,7 @@ header h1 {
 /* search */
 nav {
   display: flex;
+  height: 2.5rem;
 }
 
 nav input[type="text"] {
@@ -165,9 +170,9 @@ nav input[type="text"] {
   text-align: center;
 }
 
-nav input[type="text"]:focus {
+/* nav input[type="text"]:focus {
   padding: 1rem;
-}
+} */
 
 /* chat list */
 .list {
@@ -183,6 +188,7 @@ ul {
   list-style: none;
   overflow-y: auto;
   padding-top: 2rem;
+  height: 49rem
 }
 
 li {
@@ -264,15 +270,16 @@ form.edit-message input[type="submit"] {
 /* new message */
 form.new-message {
   display: flex;
+  height: 3.5rem
 }
 
 form.new-message input[type="text"] {
   flex: 1 1 auto;
 }
 
-form.new-message input[type="text"]:focus {
+/* form.new-message input[type="text"]:focus {
   padding: 1rem;
-}
+} */
 
 form.new-message input[type="submit"] {
   opacity: 0.8;

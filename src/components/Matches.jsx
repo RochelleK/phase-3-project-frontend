@@ -9,6 +9,7 @@ function Matches() {
   const [beltPosition, setBeltPosition] = useState(0);
   const [match, setMatch] = useState({});
   const [showChat, setShowChat] = useState(false);
+  const [showMatchCards, setShowMatchCards] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:9292/confirmedmatches")
@@ -23,7 +24,7 @@ function Matches() {
 
   function startChat(match) {
     setMatch(match);
-
+    setShowMatchCards(true);
     setShowChat(true);
   }
 
@@ -40,8 +41,9 @@ function Matches() {
           setMatches={setMatches}
         />
         <div className="match-chat-div">
-          <MatchCards match={match} setMatch={match} />
+          
 
+          {!showMatchCards ? null : <MatchCards match={match} setMatch={match} />}
           {!showChat ? null : <Chat match={match} />}
         </div>
       </div>

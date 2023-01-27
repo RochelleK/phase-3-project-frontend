@@ -3,9 +3,8 @@ import ChatApp from "./Chats/ChatApp";
 
 function Chat({match}) {
   return (
-    <div>
-      <div className="form">
-        <br></br>
+    <div className="chat-container">
+      <div >
         <ChatApp match={match}/>
       </div>
     </div>

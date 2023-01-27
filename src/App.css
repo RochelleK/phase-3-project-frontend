@@ -668,13 +668,13 @@
   height: 60rem;
   width: 40rem;
   background-color: #f3f2f6;
-  border-top-left-radius: 60px;
-  border-bottom-left-radius: 60px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   overflow-y: scroll;
 }
 
 .profile-image-match {
-  border-top-left-radius: 60px;
+  border-top-left-radius: 10px;
   overflow: hidden;
   height: 40rem;
 }
@@ -711,4 +711,9 @@
 .profile-prompt-three {
   font-size: 30px;
   margin-top: 1rem;
+  padding: 12px;
+}
+
+.chat-container{
+  height: 60rem;
 }
