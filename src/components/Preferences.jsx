@@ -8,8 +8,7 @@ function Preferences() {
   const [drinkerPref, setDrinkerPref] = useState(false);
   const [minAge, setMinAge] = useState(27);
   const [maxAge, setMaxAge] = useState(60);
-
-  
+  const [clicked, setClicked] = useState(true);
 
   const updatePrefs = (e) => {
     e.preventDefault();
@@ -126,7 +125,15 @@ function Preferences() {
             onChange={(e) => setDrinkerPref(e.target.checked)}
           />
         </div>
-        <button id="form-submit-three">Submit</button>
+        {clicked ? (
+          <button onClick={() => setClicked(!clicked)} id="form-submit-three">
+            Submit
+          </button>
+        ) : (
+          <button id="form-submit-three" onClick={() => setClicked(!clicked)}>
+            Submitted
+          </button>
+        )}
       </form>
     </div>
   );
