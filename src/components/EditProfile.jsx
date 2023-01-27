@@ -13,7 +13,7 @@ function EditProfile() {
   const [prompt2, setPrompt2] = useState("");
   const [prompt3, setPrompt3] = useState("");
   const [meme, setMeme] = useState("");
-  const [age, setAge] = useState(30)
+  const [age, setAge] = useState(30);
 
   const updateProfile = (e) => {
     e.preventDefault();
@@ -45,16 +45,17 @@ function EditProfile() {
       .then(setBio(""))
       .then(setPrompt1(""))
       .then(setPrompt2(""))
-      .then(setPrompt3(""))
+      .then(setPrompt3(""));
   };
 
   return (
-    <div id="form-2-div">
-      <form className="form-2" onSubmit={updateProfile}>
+    <div id="profile-card-div-pref">
+      <form className="form" onSubmit={updateProfile}>
         <p className="form-title">My Profile</p>
         <div>
           <label className="form-text">Gender Idenity</label>
           <select
+            className="dropdown"
             name="gender"
             value={gender}
             onChange={(e) => setGender(e.target.value)}
@@ -64,9 +65,10 @@ function EditProfile() {
             <option value="Non-binary">Non-binary</option>
           </select>
         </div>
-        <div>
+        <div className="form-sections-2">
           <label className="form-text">Interested in a </label>
           <select
+            className="dropdown"
             name="interest"
             value={interest}
             onChange={(e) => setInterest(e.target.value)}
@@ -81,6 +83,7 @@ function EditProfile() {
         <div>
           <label className="form-text">Location </label>
           <select
+            className="dropdown"
             name="location"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
@@ -91,9 +94,10 @@ function EditProfile() {
             <option value="All">All</option>
           </select>
         </div>
-        <div>
+        <div className="form-sections-2">
           <label className="form-text">Political View </label>
           <select
+            className="dropdown"
             name="political"
             value={political}
             onChange={(e) => setPolitical(e.target.value)}
@@ -103,7 +107,7 @@ function EditProfile() {
           </select>
         </div>
 
-        <div className="slider">
+        <div className="form-sections-2">
           <label className="form-text">Slide to set Age: </label>
           <input
             id="range"
@@ -117,7 +121,7 @@ function EditProfile() {
           <p className="range-value">Age: {age}</p>
         </div>
 
-        <div className="checkbox-div">
+        <div className="form-sections-2">
           <label id="exercise" className="form-text" htmlFor="exercise">
             Smoker?
           </label>
@@ -127,7 +131,12 @@ function EditProfile() {
             value={smoker}
             onChange={(e) => setSmoker(e.target.checked)}
           />
-          <label id="meditation" className="form-text" htmlFor="meditation">
+          <label
+            id="drinker"
+            className="form-text"
+            htmlFor="meditation"
+            id="drinker"
+          >
             Drinker?
           </label>
           <input
@@ -137,7 +146,7 @@ function EditProfile() {
             onChange={(e) => setDrinker(e.target.checked)}
           />
         </div>
-        <div>
+        <div className="form-sections-2">
           <label className="form-text">Profile Pic </label>
           <input
             id="text-box"
@@ -146,7 +155,7 @@ function EditProfile() {
             onChange={(e) => setProfilePic(e.target.value)}
           />
         </div>
-        <div>
+        <div className="form-sections-2">
           <label className="form-text">A little bit about me: </label>
           <input
             id="text-box"
@@ -166,7 +175,7 @@ function EditProfile() {
             onChange={(e) => setPrompt1(e.target.value)}
           />
         </div>
-        <div>
+        <div className="form-sections-2">
           <label className="form-text">
             Some of my hobbies and passions include:{" "}
           </label>
@@ -187,7 +196,7 @@ function EditProfile() {
           />
         </div>
 
-        <div>
+        <div className="form-sections-2">
           <label className="form-text">Favorite Meme </label>
           <input
             id="text-box"
@@ -196,7 +205,7 @@ function EditProfile() {
             onChange={(e) => setMeme(e.target.value)}
           />
         </div>
-        <button id="form-submit">Save Changes</button>
+        <button id="form-submit">Submit</button>
       </form>
     </div>
   );
