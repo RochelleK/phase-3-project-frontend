@@ -34,6 +34,8 @@ function Matches() {
           beltPosition={beltPosition}
           setBeltPosition={setBeltPosition}
           matches={matches.slice(beltPosition, beltPosition + 4)}
+          updateMatches={matches}
+          setMatches={setMatches}
         />
         <div className="match-chat-div">
           <MatchCards match={match} setMatch={match} />
