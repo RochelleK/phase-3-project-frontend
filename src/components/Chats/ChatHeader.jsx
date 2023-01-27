@@ -4,8 +4,8 @@ import "./chat.css";
 
 function ChatHeader({ isDarkMode, onToggleDarkMode, match}) {
   return (
-    <header>
-      <h1>You are now chatting with {match.name}</h1>
+    <header className="chat-header">
+      <h1 >You are now chatting with {match.name}</h1>
       <div className="toggle-switch">
         <input
           type="checkbox"

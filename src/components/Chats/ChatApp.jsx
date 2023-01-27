@@ -43,6 +43,7 @@ function ChatApp({match}) {
   );
 
   return (
+    <div className="chat-div">
     <main className={isDarkMode ? "dark-mode" : ""}>
       <ChatHeader isDarkMode={isDarkMode} onToggleDarkMode={setIsDarkMode} match={match}/>
       <Search search={search} onSearchChange={setSearch} />
@@ -54,6 +55,7 @@ function ChatApp({match}) {
       />
       <NewMessage currentUser={testUser} onAddMessage={handleAddMessage} />
     </main>
+    </div>
   );
 }
 
