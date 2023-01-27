@@ -144,9 +144,8 @@ function EditProfile() {
           />
         </div>
         <div className="form-sections-2">
-          <label className="form-text">Profile Pic </label>
+          <label  id="custom-file-upload" className="form-text">Profile Pic </label>
           <input
-            id="text-box"
             type="file"
             value={profilePic}
             onChange={(e) => setProfilePic(e.target.value)}
@@ -196,7 +195,7 @@ function EditProfile() {
         <div className="form-sections-2">
           <label className="form-text">Favorite Meme </label>
           <input
-            id="text-box"
+            id="file"
             type="file"
             value={meme}
             onChange={(e) => setMeme(e.target.value)}
