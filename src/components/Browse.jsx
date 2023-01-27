@@ -11,7 +11,7 @@ function Browse() {
   // }
 
   useEffect(() =>{
-    fetch("http://localhost:9292/users")
+    fetch("http://localhost:9292/users/potential")
     .then ((response) => response.json())
     .then ((response) => {setPotentialMatches(response)})
   }, []);
@@ -20,8 +20,25 @@ function Browse() {
   const potentialMatch = potentialMatches[currentPotentialMatch]
   console.log(potentialMatch)
 
-  //handles the async request to avoid an "undefined" error
-  if (!potentialMatches[currentPotentialMatch]) return null
+  //this line of code handles the async request to avoid an "undefined" error:
+  //if (!potentialMatches[currentPotentialMatch]) return null
+
+  //Out-of-Potential-Matches Error handler
+  if (!potentialMatches[currentPotentialMatch]) return (
+    <div>
+       <Header />
+       <div>
+        <video id="empty-beach" muted autoplay={"autopnpmlay"} preload="auto" loop>
+          <source src="assets/beach_placeholder.mov" type="video/mp4"/>
+        </video>
+       </div>
+       <div className='no-more-potential'>
+        <h1 className='error-tagline'>Sorry, you're out of potential matches...</h1>
+        <br />
+        <h3 className='error-tagline'>please try again later</h3>
+       </div>
+    </div>
+  )
 
   function handleAccept(match){
     fetch("http://localhost:9292/newmatch", {
