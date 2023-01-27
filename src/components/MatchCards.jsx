@@ -14,19 +14,15 @@ function MatchCards({ match }) {
     profile_image,
   } = match;
   return (
-    <div className="match-chat-div-2">
-      <div className="form">
-        <p>{name}</p>
-        <br></br>
-        <img src={profile_image} />
-        <p>{age}</p>
-        <p>{location}</p>
-        <p>{bio}</p>
-        <p>{prompt_1}</p>
-        <p>{prompt_2}</p>
-        <p>{prompt_3}</p>
-        <p></p>
+    <div className="match-center-div">
+      <img className="profile-image-match" src={profile_image} />
+      <div className="match-info">
+        <p className="match-center-name">{name}</p>
+        <p className="match-center-age">{age}</p>
+        <p className="match-center-location">{location}</p>
       </div>
+      <p className="profile-prompt-three">{bio}</p>
+      <p></p>
     </div>
   );
 }

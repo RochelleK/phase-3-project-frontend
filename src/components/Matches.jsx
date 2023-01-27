@@ -24,10 +24,8 @@ function Matches() {
   function startChat(match) {
     setMatch(match);
 
-    setShowChat(true)
-
+    setShowChat(true);
   }
-
 
   return (
     <div>
@@ -45,7 +43,6 @@ function Matches() {
           <MatchCards match={match} setMatch={match} />
 
           {!showChat ? null : <Chat match={match} />}
-
         </div>
       </div>
     </div>

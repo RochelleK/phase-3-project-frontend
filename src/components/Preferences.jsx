@@ -124,7 +124,7 @@ function Preferences() {
             onChange={(e) => setDrinkerPref(e.target.checked)}
           />
         </div>
-        <button id="form-submit">Submit</button>
+        <button id="form-submit-three">Submit</button>
       </form>
     </div>
   );
