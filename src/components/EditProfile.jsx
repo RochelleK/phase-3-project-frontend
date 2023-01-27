@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function EditProfile({ showProfile, setShowProfile}) {
+function EditProfile({ showProfile, setShowProfile }) {
   const [gender, setGender] = useState("Woman");
   const [interest, setInterest] = useState("All");
   const [location, setLocation] = useState("NYC");
@@ -10,8 +10,7 @@ function EditProfile({ showProfile, setShowProfile}) {
   );
   const [smoker, setSmoker] = useState(false);
   const [drinker, setDrinker] = useState(false);
-  const [profilePic, setProfilePic] = useState(
-""  );
+  const [profilePic, setProfilePic] = useState("");
   const [prompt1, setPrompt1] = useState(
     "I am looking for a long term relatioship with someone who wants to love me for who I am on the inside."
   );
@@ -21,10 +20,8 @@ function EditProfile({ showProfile, setShowProfile}) {
   const [prompt3, setPrompt3] = useState(
     "I am the queen of Wakanda. I have three siblings. I've been to the grammys"
   );
-  const [meme, setMeme] = useState(
-""  );
-  const [age, setAge] = useState(30)
-
+  const [meme, setMeme] = useState("");
+  const [age, setAge] = useState(30);
 
   const updateProfile = (e) => {
     e.preventDefault();
@@ -60,7 +57,7 @@ function EditProfile({ showProfile, setShowProfile}) {
   };
 
   return (
-    <div id="profile-card-div-pref-two">
+    <div className="profile-card-div-pref-two">
       <form className="form" onSubmit={updateProfile}>
         <p className="form-title">My Profile</p>
         <div>
@@ -155,7 +152,9 @@ function EditProfile({ showProfile, setShowProfile}) {
           />
         </div>
         <div className="form-sections-2">
-          <label  id="custom-file-upload" className="form-text">Profile Pic </label>
+          <label id="custom-file-upload" className="form-text">
+            Profile Pic{" "}
+          </label>
           <input
             type="file"
             value={profilePic}
@@ -214,9 +213,9 @@ function EditProfile({ showProfile, setShowProfile}) {
         </div>
         <button id="form-submit">Submit</button>
       </form>
-        <button id="form-submit" onClick={() => setShowProfile(true)}>
-          Go Back
-        </button>
+      <button id="form-submit-two" onClick={() => setShowProfile(true)}>
+        Go Back
+      </button>
     </div>
   );
 }
