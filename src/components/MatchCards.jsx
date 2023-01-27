@@ -27,10 +27,6 @@ function MatchCards({ match }) {
         <p>{prompt_3}</p>
         <p></p>
       </div>
-      { match == [] ?
-      <></> :
-      <Chat match={match} /> 
-    }
     </div>
   );
 }
