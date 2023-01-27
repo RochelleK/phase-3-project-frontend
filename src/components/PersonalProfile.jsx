@@ -28,7 +28,7 @@ function PersonalProfile() {
             }}
             className="pref-button"
           >
-            Edit Preferences
+            Discovery Settings
           </button>
           <ProfileCard user={user} />
         </div>

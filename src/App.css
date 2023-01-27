@@ -293,6 +293,24 @@
   text-align: center;
 }
 
+#form-submit-three {
+  margin-top: 1.5rem;
+  background-color: #e2c4ff;
+  border: #e2c4ff;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  color: white;
+  font-size: 35px;
+  font-weight: 800;
+  height: 50px;
+  width: 200px;
+  margin-bottom: 1.5rem;
+  margin-top: 4rem;
+
+  text-align: center;
+}
 #form-submit-two {
   margin-top: 1.5rem;
   background-color: #e2c4ff;
@@ -355,7 +373,7 @@
   border: 4px black solid;
   height: 63rem;
   width: 50rem;
-  margin-left: 28rem;
+  margin-left: 26rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -370,7 +388,7 @@
   border: 4px black solid;
   height: 63rem;
   width: 50rem;
-  margin-left: 28rem;
+  margin-left: 26rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -385,7 +403,7 @@
   border: 4px black solid;
   height: 80rem;
   width: 80rem;
-  margin-left: 16rem;
+  margin-left: 14rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -469,8 +487,8 @@
   border: #e2c4ff;
   border-radius: 5px;
   font-size: 19px;
-  height: 2rem;
-  width: 7rem;
+  height: 3rem;
+  width: 9rem;
   margin-top: 1rem;
 }
 
@@ -525,7 +543,7 @@
   border: 4px black solid;
   height: 70rem;
   width: 80rem;
-  margin-left: 52rem;
+  margin-left: 50rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -569,7 +587,7 @@
 .matchcaraousel {
   display: flex;
   justify-content: center;
-  margin-top: 14rem;
+  margin-top: 16rem;
 }
 
 .match-chat-div {
@@ -643,6 +661,54 @@
   align-items: center;
 }
 
-.match-chat-div-2 {
+.match-center-div {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 60rem;
+  width: 40rem;
+  background-color: #f3f2f6;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+  overflow-y: scroll;
+}
+
+.profile-image-match {
+  border-top-left-radius: 60px;
+  overflow: hidden;
+  height: 40rem;
+}
+
+.match-info {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  text-shadow: -1px 1px 0 #838e95, 1px 1px 0 #6d6b6b, 1px -1px 0 #131515,
+    -1px -1px 0 #1a1a1;
+}
+
+.match-center-name {
+  text-shadow: -1px 1px 0 #838e95, 1px 1px 0 #6d6b6b, 1px -1px 0 #131515,
+    -1px -1px 0 #1a1a19;
+  font-size: 40px;
+}
+
+.match-center-age {
+  text-shadow: -1px 1px 0 #838e95, 1px 1px 0 #6d6b6b, 1px -1px 0 #131515,
+    -1px -1px 0 #1a1a19;
+  font-size: 40px;
+  margin-left: 1rem;
+}
+
+.match-center-location {
+  text-shadow: -1px 1px 0 #838e95, 1px 1px 0 #6d6b6b, 1px -1px 0 #131515,
+    -1px -1px 0 #1a1a19;
+  font-size: 40px;
+  color: white;
+  margin-left: 1rem;
+}
+
+.profile-prompt-three {
+  font-size: 30px;
+  margin-top: 1rem;
 }
