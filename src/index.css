@@ -1,21 +1,19 @@
 .match {
   border: 1px #f3f2f6 solid;
-  border-radius: 50px;
+
   background-color: #f3f2f6;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   margin-top: 2.5rem;
   width: 364px;
-  height: 550px;
+  height: 490px;
   margin-left: 4rem;
 }
 
 .match-card-image {
   width: 360px;
   height: 430px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
 }
 
 .chatbox {
