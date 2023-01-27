@@ -37,7 +37,7 @@ function ProfileCard({ user }) {
           </div>
         </div>
       ) : (
-        <div className="profile-card-div-pref">
+        <div className="profile-card-div-pref-two">
           <EditProfile user={user} />
         </div>
       )}

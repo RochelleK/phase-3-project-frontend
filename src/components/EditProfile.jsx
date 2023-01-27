@@ -49,11 +49,11 @@ function EditProfile() {
   };
 
   return (
-    <div id="profile-card-div-pref">
+    <div id="profile-card-div-pref-two">
       <form className="form" onSubmit={updateProfile}>
         <p className="form-title">My Profile</p>
         <div>
-          <label className="form-text">Gender Idenity</label>
+          <label className="form-text">Gender Identity </label>
           <select
             className="dropdown"
             name="gender"
@@ -66,21 +66,19 @@ function EditProfile() {
           </select>
         </div>
         <div className="form-sections-2">
-          <label className="form-text">Interested in a </label>
+          <label className="form-text">Interested in </label>
           <select
             className="dropdown"
             name="interest"
             value={interest}
             onChange={(e) => setInterest(e.target.value)}
           >
-            <option value="Woman">Woman</option>
-            <option value="Man">Man</option>
-            <option value="Non-binary"> Non-binary</option>
-            <option value="Woman and Man">Woman and Man</option>
-            <option value="All">All</option>
+            <option value="Woman">Women</option>
+            <option value="Man">Men</option>
+            <option value="All"> Everyone</option>
           </select>
         </div>
-        <div>
+        <div className="form-sections-2">
           <label className="form-text">Location </label>
           <select
             className="dropdown"
@@ -107,18 +105,17 @@ function EditProfile() {
           </select>
         </div>
 
-        <div className="form-sections-2">
-          <label className="form-text">Slide to set Age: </label>
+        <div className="form-sections-2-plus">
+          <label className="form-text">Age</label>
           <input
             id="range"
             type="range"
             value={age}
             onChange={(e) => setAge(e.target.valueAsNumber)}
-            max={90}
-            // style={getBackgroundSizeWater()}
+            min={18}
+            max={100}
           />
-
-          <p className="range-value">Age: {age}</p>
+          <p className="range-text">{age}</p>
         </div>
 
         <div className="form-sections-2">
@@ -164,7 +161,7 @@ function EditProfile() {
             onChange={(e) => setBio(e.target.value)}
           />
         </div>
-        <div>
+        <div className="form-sections-2">
           <label className="form-text">
             What I am looking for in a relationship:{" "}
           </label>
@@ -186,7 +183,7 @@ function EditProfile() {
             onChange={(e) => setPrompt2(e.target.value)}
           />
         </div>
-        <div>
+        <div className="form-sections-2">
           <label className="form-text">Two truths and a lie: </label>
           <input
             id="text-box"

@@ -225,7 +225,15 @@
   flex-wrap: wrap;
 }
 .form-sections-2 {
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+
+.form-sections-2-plus {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .dropdown {
@@ -339,6 +347,21 @@
   border: #bbb5d7;
   border-radius: 60px;
 }
+
+.profile-card-div-pref-two {
+  display: flex;
+  flex-direction: column;
+  border: 4px black solid;
+  height: 80rem;
+  width: 80rem;
+  margin-left: 16rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-color: #030389;
+  border: #bbb5d7;
+  border-radius: 60px;
+}
 .profile-image {
   width: 50rem;
   border-top-left-radius: 60px;
@@ -427,4 +450,9 @@
 
 .belt {
   margin-top: 300px;
+}
+
+#text-box {
+  height: 2rem;
+  width: 20rem;
 }
